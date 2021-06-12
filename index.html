@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ENQIRIES</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="mycss.min.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="myjavascript.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("input").focus(function() {
+                $(this).css("background-color", "light grey");
+            });
+            $("input").blur(function() {
+                $(this).css("background-color", "white");
+            });
+            $("textarea").focus(function() {
+                $(this).css("background-color", "white");
+            });
+            $("textarea").blur(function() {
+                $(this).css("background-color", "light-blue");
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <h2 style="color: blue"> Welcome to the enquries website</h2>
+    <div class="container">
+        <form id="myForm" name="form1" method="POST">
+            <div class="row">
+                <div class="col-25">
+                    <label for="fname">First Name: </label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="fname" name="fname" placeholder="Name" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="number">Number: </label>
+                </div>
+                <div class="col-75">
+                    <input id="number" type="number" name="number" placeholder="Enter number" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="email">Email: </label>
+                </div>
+                <div class="col-75">
+                    <input id="email" type="email" name=email placeholder="example@gmail.com" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="Enqueries">Equeries: </label>
+                </div>
+                <div class="col-75">
+                    <textarea id="Enqueries" name="Enqueries" placeholder="Write your Enqueries" style="height: 200px"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <input type="Submit" value="Submit" onClick="myFuction" id="Submit">
+
+            </div>
+        </form>
+    </div>
+
+
+</body>
+
+</html>
